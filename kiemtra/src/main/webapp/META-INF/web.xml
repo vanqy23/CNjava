@@ -1,0 +1,25 @@
+<web-app xmlns="http://jakarta.ee/xml/ns/jakartaee"
+         version="5.0">
+
+    <servlet>
+        <servlet-name>chuyendoi</servlet-name>
+        <servlet-class>kiemtra.chuyendoi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>chuyendoi</servlet-name>
+        <url-pattern>/convert</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>kiemtranhietdo</filter-name>
+        <filter-class>kiemtra.kiemtranhietdo</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>kiemtranhietdo</filter-name>
+        <url-pattern>/convert</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>kiemtra.demso</listener-class>
+    </listener>
+</web-app>
